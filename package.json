@@ -1,0 +1,24 @@
+{
+  "name": "get-momentum",
+  "version": "1.0.0",
+  "description": "[Momentum]: https://momentumdash.com/ [Get Momentum]: https://github.com/chingubelugas/get-momentum [Resolving Merge Conflicts]: https://help.github.com/articles/resolving-merge-conflicts-after-a-git-rebase/",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vientang/get-momentum.git"
+  },
+  "keywords": [],
+  "author": "Vien, Phil, Dan, Dustin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vientang/get-momentum/issues"
+  },
+  "homepage": "https://github.com/vientang/get-momentum#readme",
+  "dependencies": {
+    "express": "^4.15.0",
+    "nodemon": "^1.11.0"
+  }
+}
