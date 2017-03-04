@@ -1,0 +1,164 @@
+/* global */
+html {
+    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url("img/background1.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+    flex: 1;
+}
+
+#center {
+    top: 10em;
+}
+
+#callToAction {
+    top: 50%;
+}
+
+#bottom {
+    top: 50%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.white {
+    color: white;
+}
+
+.black {
+    color: black;
+}
+
+/* */
+
+#topNav {
+    /*border: 1px solid yellow;*/
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 0.5em;
+    margin-bottom: 15em;
+    line-height: 75px;
+}
+
+#topNav a{
+    color: white;
+    width: 10%;
+    text-align: center;
+    padding-left: 2em;
+}
+
+#topNav .menu {
+    margin-left: 0.5em;
+}
+
+#logo {
+    width: 3em;
+    height: 3em;
+}
+
+#centerBelow {
+    padding: 15px 0 30px 0;
+}
+
+#callToAction i{
+    /*border: 1px solid blue;*/
+    margin-right: 0.2em;
+}
+
+#callToAction .btn {
+    border-radius: 3px;
+    padding: 23px 43px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.95);
+    width: 25%;
+    margin: 0 auto;
+    font-size: 1.2em;
+    font-weight: bolder;
+    transition: font-size 0.1s;
+}
+
+#footerNav {
+    border: 1px solid orange;
+    float: right;
+    margin-bottom: 1.2em;
+    padding: 20px;
+    vertical-align: bottom;
+}
+
+#footerMenu a {
+    margin-left: 1em;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 850%;
+    margin: 0;
+    transition: font-size 0.1s;
+}
+
+h2 {
+    font-size: 300%;
+    margin: 0;
+    margin-bottom: 1.5em;
+}
+
+p {
+    margin: 0;
+    margin-bottom: 0.5em;
+}
+
+.features {
+    margin: 0.5em;
+    margin-bottom: 1.3em;
+    font-size: 1.8em;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 701px){
+    h1 {
+        font-size: 500%;
+    }
+    h2 {
+        font-size: 150%;
+    }
+    .features {
+        font-size: 100%;
+    }
+    #callToAction .btn {
+        font-size: 0.75em;
+        padding: 12px 40px;
+    }
+    #center,
+    #callToAction,
+    #footerNav {
+        text-align: center;
+    }
+    #footerMenu a {
+        margin-left: 0.5em;
+    }
+}
