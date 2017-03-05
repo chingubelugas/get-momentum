@@ -9,105 +9,17 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
     padding: 0;
-    width: 95%;
-    height: 100%;
     position: relative;
     flex: 1;
     text-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-direction: column;
 }
 
-#center {
-    top: 10em;
-}
-
-#callToAction {
-    top: 50%;
-}
-
-#bottom {
-    top: 50%;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-.textCenter {
-    text-align: center;
-}
-
-.white {
-    color: white;
-}
-
-.black {
-    color: black;
-}
-
-/* */
-
-#topNav {
-    /*border: 1px solid yellow;*/
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin-top: 0.5em;
-    margin-bottom: 15em;
-    line-height: 75px;
-}
-
-#topNav a{
-    color: white;
-    width: 10%;
-    text-align: center;
-    padding-left: 2em;
-}
-
-#topNav .menu {
-    margin-left: 0.5em;
-}
-
-#logo {
-    width: 3em;
-    height: 3em;
-}
-
-#centerBelow {
-    padding: 15px 0 30px 0;
-}
-
-#callToAction i{
-    /*border: 1px solid blue;*/
-    margin-right: 0.2em;
-}
-
-#callToAction .btn {
-    border-radius: 3px;
-    padding: 23px 43px;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
-    background: rgba(255, 255, 255, 0.95);
-    width: 25%;
-    margin: 0 auto;
-    font-size: 1.2em;
-    font-weight: bolder;
-    transition: font-size 0.1s;
-}
-
-#footerNav {
-    border: 1px solid orange;
-    float: right;
-    margin-bottom: 1.2em;
-    padding: 20px;
-    vertical-align: bottom;
-}
-
-#footerMenu a {
-    margin-left: 1em;
+header {
+		display: flex;
 }
 
 h1 {
@@ -120,7 +32,7 @@ h1 {
 h2 {
     font-size: 300%;
     margin: 0;
-    margin-bottom: 1.5em;
+    margin-bottom: 0.5em;
 }
 
 p {
@@ -128,13 +40,91 @@ p {
     margin-bottom: 0.5em;
 }
 
-.features {
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.topNav {
+    /*border: 1px solid yellow;*/
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 0.5em;
+    margin-bottom: 7em;
+    line-height: 48px;
+}
+
+.topNav a{
+    color: white;
+    width: 10%;
+    text-align: center;
+    padding-left: 2em;
+}
+
+.topNav .menu {
+    margin-left: 0.5em;
+}
+
+.logo {
+    width: 3em;
+    height: 3em;
+    margin-left: 10px;
+}
+
+.main-content {
+    text-align: center;
+    color: white;
+}
+
+.daily {
     margin: 0.5em;
     margin-bottom: 1.3em;
     font-size: 1.8em;
     font-weight: 300;
 }
 
+section i,
+.momentum-btn-txt {
+    color: black;
+}
+
+section i {
+    /*border: 1px solid blue;*/
+    margin-right: 0.2em;
+}
+
+.btn {
+    border-radius: 3px;
+    padding: 20px 25px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.95);
+    width: 25%;
+    margin: 0 auto;
+    font-size: 1.2em;
+    font-weight: bolder;
+    transition: font-size 0.1s;
+}
+
+footer {
+	  position: absolute;
+    top: 100vh;
+    transform: translateY(-100%);
+    width: 100%;
+}
+.footerNav {
+		display: flex;
+		justify-content: flex-end;
+		flex-direction: row;
+    margin-top: 1.2em;
+    padding: 20px;
+}
+
+.footerMenu a {
+		margin-left: 1.2em;
+}
+
+/* IPHONE 6, 6 PLUS, GALAXY S5, NEXUS 5X, NEXUS 6P */
 @media screen and (max-width: 701px){
     h1 {
         font-size: 500%;
@@ -142,19 +132,64 @@ p {
     h2 {
         font-size: 150%;
     }
-    .features {
+    .topNav .menu {
+		    font-size: 0.9em;
+		}
+    .main-content {
+    	  transform: translateY(65%);
+    }
+    .daily {
         font-size: 100%;
+        margin-top: 5.3em;
     }
-    #callToAction .btn {
+    .btn {
         font-size: 0.75em;
-        padding: 12px 40px;
+        padding: 12px 14px;
     }
-    #center,
-    #callToAction,
-    #footerNav {
-        text-align: center;
+    footer {
+    	  position: absolute;
+		    top: 100vh;
+		    transform: translateY(-100%);
+		    width: 100%;
     }
-    #footerMenu a {
+    .footerMenu a {
         margin-left: 0.5em;
+    }
+}
+
+/* IPHONE 5 */
+@media screen and (max-width: 320px){
+    h1 {
+        font-size: 375%;
+    }
+    h2 {
+        font-size: 130%;
+    }
+    .topNav .menu {		    
+		    font-size: 0.8em;
+		}
+		.topNav a {
+				padding-left: 1em;
+		}
+    .main-content {
+    	  transform: translateY(15%);
+    }
+    .daily {
+        font-size: 90%;
+        margin-top: 2.3em;
+    }
+    .btn {
+        font-size: 0.75em;
+        padding: 7px 7px;
+    }
+    footer {
+    	  position: absolute;
+		    top: 100vh;
+		    transform: translateY(-100%);
+		    width: 100%;
+    }
+    .footerMenu a {
+        margin-left: 0.5em;
+        font-size: 0.6em;
     }
 }
