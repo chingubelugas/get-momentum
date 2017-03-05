@@ -19,7 +19,17 @@ What does it do? Get Momentum will gently take over your default home screen on 
   - git remote add upstream https://github.com/chingubelugas/get-momentum (set a remote to the main repo so later you can pull down updates from other team members)
   - npm run start
 
-##Update Your Project
+##Wireframes
+![alt tag](https://raw.githubusercontent.com/username/get-momentum/master/client/assets/wireframe1.png)
+
+##Stack
+1. jQuery
+2. Node
+
+##Roadmap
+v1.0 Reverse engineer the front end of the [Momentum][] app, fetch random photos, random quotes and weather data, build a todo list and pomodoro timer.
+
+###Updating Your Project
 1. Commit your changes or remove them from staging
 2. Check your remotes by running git remote -v. You should see your origins and the upstreams.
 
