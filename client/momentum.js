@@ -2,7 +2,6 @@
 var date = new Date();
 var seconds = date.getSeconds();
 var refresh = 60 - seconds;
-console.log(refresh);
 
 function getTime(date) {
   var hours = date.getHours();
