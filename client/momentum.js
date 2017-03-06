@@ -1,9 +1,26 @@
 //********* FUNCTIONS TO GET THE CURRENT TIME *********//
-var date = new Date();
-var seconds = date.getSeconds();
-var refresh = 60 - seconds;
 
-function getTime(date) {
+
+//Placed timer updating function inside of the setInterval function rather than the setTimeout Function
+//Commented out the refresh and seconds variables, since the interval will always be one second long
+//We can re-enable seconds if we want to display them later.
+$(document).ready(function(){
+  //console.log("Jquery is live!")
+  $('.time').text(getTime());
+  setInterval(function() {
+    console.log("running get time");
+  	$('.time').text(getTime());
+
+  }, 1000);
+});
+var date = new Date()
+//var seconds = date.getSeconds();
+//var refresh = 60 - seconds;
+
+function getTime() {
+  date = new Date();
+  //seconds = date.getSeconds();
+  //refresh = 60 - seconds;
   var hours = date.getHours();
   var minutes = date.getMinutes();
   var ampm = hours >= 12 ? 'pm' : 'am';
@@ -14,11 +31,7 @@ function getTime(date) {
   return strTime;
 }
 
-$('.time').text(getTime(date));
-setTimeout(function() {
-	$('.time').text(getTime(date));
-	refresh = 60;
-}, refresh * 1000)
+
 
 // setInterval(function() {
 // 	if (refresh > 0) {
@@ -38,7 +51,7 @@ function animateWords(idx) {
 		dailyWord.text(dailyWords[idx]);
 		dailyWord.fadeIn(1000, function() {
 			dailyWord.text(dailyWords[idx]);
-		})		
+		})
 	});
 }
 
@@ -59,7 +72,7 @@ var currentAuthor = '';
 function displayQuote(json) {
   var quote = json[0];
   currentQuote = quote.content.slice(3, quote.content.length - 6);
-  currentAuthor = quote.title;  
+  currentAuthor = quote.title;
   localStorage.setItem('quote', quote.content);
   localStorage.setItem('author', quote.title);
   $('cite').html(quote.content)
@@ -75,7 +88,7 @@ function generateQuotes() {
   } else {
 	  // save today's date on the users computer
 	  localStorage.setItem('today', today);
-	  
+
 	  // get a quote for the day, display it with displayQuote()
 		$.ajax({
 		  crossorigin: true,
@@ -92,4 +105,3 @@ function generateQuotes() {
 }
 // localStorage.clear();
 generateQuotes();
-
