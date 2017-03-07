@@ -6,6 +6,7 @@
 //We can re-enable seconds if we want to display them later.
 $(document).ready(function(){
   //console.log("Jquery is live!")
+  yankWeather();
   $('.time').text(getTime());
   setInterval(function() {
     console.log("running get time");
@@ -16,6 +17,50 @@ $(document).ready(function(){
 var date = new Date()
 //var seconds = date.getSeconds();
 //var refresh = 60 - seconds;
+
+
+// GEOLOCATION AND WEATHER FUNCTION
+function yankWeather(){
+// Weather API key is 6a2618b8bb876563
+// TODO: Add "Weather by Weather Underground somewhere on the page for attribution"
+// Map API key is AIzaSyCvPKK2Cp2J-4n0VRk4EdkAnEluI6KvQik
+// We may not need this API if we can just go through navigator
+
+  navigator.geolocation.getCurrentPosition(success,error)
+    function success(position){
+      //console.log(position);
+      //GET COORDINATES FROM GOOGLE'S GEOLOCATION
+      var latitude = position.coords.latitude;
+      var longitude = position.coords.longitude;
+      //console.log(latitude + "," + longitude);
+      var mapURL = 'http://maps.googleapis.com/maps/api/geocode/json?latlng='+latitude+','+longitude+'&sensor=true';
+      console.log(mapURL);
+      //GET CITY AND STATE DATA FROM THE MAP URL
+      $.getJSON(mapURL, function(data){
+        console.log(data);
+        var weatherKey = '6a2618b8bb876563';
+        var state = data.results[0].address_components[6].short_name;
+        var city = data.results[0].address_components[4].short_name;
+        console.log(state +","+city);
+        var weatherURL = "http://api.wunderground.com/api/" + weatherKey +"/conditions/q/" + state + "/" + city + ".json";
+        console.log(weatherURL);
+
+        //GET WEATHER DATA AND CURRENT CODITIONS
+        $.getJSON(weatherURL, function(weatherData){
+          console.log(weatherData);
+          console.log("CONDITIONS ARE:")
+          console.log(weatherData.current_observation.icon);
+          console.log(weatherData.current_observation.weather);
+        })
+      });
+    }
+
+  function error(){
+    console.log(error);
+  }
+
+  }
+
 
 function getTime() {
   date = new Date();
