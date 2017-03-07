@@ -38,7 +38,11 @@ function yankWeather(){
       //GET CITY AND STATE DATA FROM THE MAP URL
       $.getJSON(mapURL, function(data){
         console.log(data);
-        var weatherKey = '6a2618b8bb876563';
+        
+        //REPLACE WEATHER KEY HERE
+        var weatherKey = "IT IS A SECRET TROLOLOLOL";
+        //REPLACED WEATHER KEY HERE
+
         var state = data.results[0].address_components[6].short_name;
         var city = data.results[0].address_components[4].short_name;
         console.log(state +","+city);
