@@ -21,9 +21,7 @@ var date = new Date()
 
 // GEOLOCATION AND WEATHER FUNCTION
 function yankWeather(){
-// Weather API key is 6a2618b8bb876563
 // TODO: Add "Weather by Weather Underground somewhere on the page for attribution"
-// Map API key is AIzaSyCvPKK2Cp2J-4n0VRk4EdkAnEluI6KvQik
 // We may not need this API if we can just go through navigator
 
   navigator.geolocation.getCurrentPosition(success,error)
@@ -38,7 +36,7 @@ function yankWeather(){
       //GET CITY AND STATE DATA FROM THE MAP URL
       $.getJSON(mapURL, function(data){
         console.log(data);
-        
+
         //REPLACE WEATHER KEY HERE
         var weatherKey = "IT IS A SECRET TROLOLOLOL";
         //REPLACED WEATHER KEY HERE
