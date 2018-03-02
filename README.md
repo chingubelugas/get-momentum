@@ -5,13 +5,13 @@
 # get-momentum
 reverse-engineering this beautiful chrome app: [Momentum][] 
 
-##Description
+## Description
 Get Momentum is inspired by a popular Chrome extension app called [Momentum][] that has over 2.5 million users and is rated 4.5 of 5 stars from 9241 people. Download it in the Chrome App Store!
 
 What does it do? Get Momentum will gently take over your default home screen on Google Chrome with a new inspirational photo each day. It's not just a pretty picture! It will also assist you in making your days more productive with a daily reminder of your goal, a todo list, a place to save your favorite links, a pomodoro timer, and even a weather check. 
 
-##Getting Started
-####Before Getting Started, install Node on your machine
+## Getting Started
+#### Before Getting Started, install Node on your machine
 1. Fork the [Get Momentum][] repo to your Github account
 2. Clone the repo from your Github account to your machine. 
 3. CD into your Get Momentum directory and run the following commands:
@@ -19,17 +19,17 @@ What does it do? Get Momentum will gently take over your default home screen on 
   - git remote add upstream https://github.com/chingubelugas/get-momentum (set a remote to the main repo so later you can pull down updates from other team members)
   - npm run start
 
-##Wireframes
+## Wireframes
 ![alt tag](https://raw.githubusercontent.com/username/get-momentum/master/client/assets/wireframe1.png)
 
-##Stack
+## Stack
 1. jQuery
 2. Node
 
-##Roadmap
+## Roadmap
 v1.0 Reverse engineer the front end of the [Momentum][] app, fetch random photos, random quotes and weather data, build a todo list and pomodoro timer.
 
-###Updating Your Project
+### Updating Your Project
 1. Commit your changes or remove them from staging
 2. Check your remotes by running git remote -v. You should see your origins and the upstreams.
 
